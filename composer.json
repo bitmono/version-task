@@ -1,0 +1,52 @@
+{
+  "name": "bitmono/version-task",
+  "version": "0.0.1",
+  "description": "A simple Laravel package for running tasks against a specific version, persisting results to a database",
+  "homepage": "https://github.com/bitmono/version-task",
+  "keywords": [
+    "deployment",
+    "ci/cd",
+    "semver",
+    "laravel"
+  ],
+  "type": "library",
+  "require": {
+    "php": "^7.2",
+    "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
+    "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.0",
+    "orchestra/testbench": "3.5.*|3.6.*|3.7.*|3.8.*|^4.0",
+    "phpunit/phpunit": "^6.5|^7.0|^8.0",
+    "jenssegers/model": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bitmono\\VersionTask\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bitmono\\VersionTask\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Bitmono\\VersionTask\\VersionTaskServiceProvider"
+      ]
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Daniel Davidson",
+      "email": "dan@bitmono.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
